@@ -11,7 +11,7 @@ body {
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
-    background-image: url("your-background-image.jpg"); /* did not implement"*/
+    background-image: url("your-background-image.jpg"); /* Replace with your image URL */
     background-size: cover;
     background-attachment: fixed;
 }
@@ -38,7 +38,7 @@ body {
 
 header {
     text-align: center;
-    animation: backgroundFlow 10s linear infinite; 
+    animation: backgroundFlow 10s linear infinite;
     color: #fff;
     padding: 50px;
 }
@@ -53,9 +53,8 @@ header p {
     opacity: 0.8;
 }
 
-
 header img {
-    max-width: 200px; 
+    max-width: 200px;
     height: auto;
     margin-top: 20px;
     border-radius: 25%;
@@ -98,11 +97,11 @@ h2 {
 
 /* About Section */
 #about {
-    background-color: rgba(255, 255, 255, 0.8); 
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     text-align: center;
     margin: 0 auto;
-    max-width: 800px; 
+    max-width: 800px;
     border-radius: 10px;
     margin-top: 20px;
 }
@@ -114,7 +113,7 @@ h2 {
 
 /* Portfolio Section */
 #portfolio {
-    background-color: rgba(240, 240, 240, 0.8); 
+    background-color: rgba(240, 240, 240, 0.8);
     padding: 20px;
     text-align: center;
     margin: 0 auto;
@@ -125,7 +124,7 @@ h2 {
 
 /* Projects Section */
 #projects {
-    background-color: rgba(255, 255, 255, 0.8); 
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     text-align: center;
     margin: 0 auto;
@@ -140,11 +139,11 @@ h2 {
 }
 
 #contact {
-    background-color: rgba(240, 240, 240, 0.8); 
+    background-color: rgba(240, 240, 240, 0.8);
     padding: 20px;
     text-align: center;
     margin: 0 auto;
-    max-width: 800px; 
+    max-width: 800px;
     border-radius: 10px;
     margin-top: 20px;
 }
@@ -174,7 +173,7 @@ textarea {
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 14px; 
+    font-size: 14px;
 }
 
 button[type="submit"] {
@@ -191,12 +190,12 @@ button[type="submit"]:hover {
     background-color: #ff6600;
 }
 
-
 nav a.active {
     color: #ff9900;
 }
+
 #projects li {
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 
 #projects li a {
@@ -214,32 +213,34 @@ nav a.active {
     text-decoration: none;
     color: #a06e04;
     font-weight: bold;
-    transition: color 0.3s, transform 0.3s; 
+    transition: color 0.3s, transform 0.3s;
+}
 
 .contact-links a:hover {
     color: #000000;
-    transform: scale(1.1); 
+    transform: scale(1.1);
+}
 
 .projectlinks a {
     text-decoration: none;
     color: #a06e04;
     font-weight: bold;
-    transition: color 0.3s, transform 0.3s; 
+    transition: color 0.3s, transform 0.3s;
 }
 
 .projectlinks a:hover {
     color: #000000;
-    transform: scale(1.1); }
+    transform: scale(1.1);
+}
+
 #easter-egg-link {
     width: 100px;
     height: 100px;
-    background-color: #ffec40; 
+    background-color: #ffec40;
     border-radius: 50%;
     display: inline-block;
     transition: all 0.5s;
 }
-
-
 
 @media (max-width: 768px) {
     header {
@@ -261,4 +262,4 @@ nav a.active {
     #about, #portfolio, #projects, #contact {
         padding: 10px;
     }
-}}}
+}
