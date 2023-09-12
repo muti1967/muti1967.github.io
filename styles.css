@@ -17,25 +17,24 @@ body {
 }
 
 /* Header */
-
+/*
 @keyframes backgroundFlow {
     0% {
-        background-color: #3498db; /* Start with a blue color */
+        background-color: #3498db; 
     }
     25% {
-        background-color: #9b59b6; /* Transition to a purple color */
-    }
+        background-color: #9b59b6; 
     50% {
-        background-color: #2980b9; /* Transition back to blue */
+        background-color: #2980b9; 
     }
     75% {
-        background-color: #8e44ad; /* Transition back to purple */
+        background-color: #8e44ad; 
     }
     100% {
-        background-color: #3498db; /* End with blue */
+        background-color: #3498db; 
     }
 }
-
+*/
 header {
     text-align: center;
     animation: backgroundFlow 10s linear infinite;
@@ -60,6 +59,7 @@ header img {
     border-radius: 25%;
     border: 10px solid #333;
 }
+
 
 /* Navigation Bar */
 nav {
@@ -164,6 +164,14 @@ label {
     font-weight: bold;
     margin-bottom: 5px;
 }
+.parallax {
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 10vh;
+    position: relative;
+}
 
 input[type="text"],
 input[type="email"],
@@ -241,6 +249,7 @@ nav a.active {
     display: inline-block;
     transition: all 0.5s;
 }
+
 
 @media (max-width: 768px) {
     header {

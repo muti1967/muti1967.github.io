@@ -24,6 +24,46 @@ contactForm.addEventListener('submit', function (event) {
         });
 });
 
+//cool effects section
+
+const parallax = document.querySelector('.parallax');
+let scrollValue = 0;
+
+function moveBackgroundVertical() {
+    scrollValue += 0.1; // Adjust the increment to control the speed
+    parallax.style.backgroundPositionY = `${scrollValue}px`;
+
+    // Reset the position when it reaches the end
+    if (scrollValue >= window.innerHeight) {
+        scrollValue = 0;
+    }
+    requestAnimationFrame(moveBackgroundVertical);
+}
+
+moveBackgroundVertical(); // Start the animation
+
+
+/*    
+    <div class="parallax">
+      <video autoplay muted loop id="bg-video">
+          <source src="images/blbck.mp4" type="video/mp4">
+          <!-- Add additional sources for different formats if needed -->
+          Your browser does not support the video tag.
+      </video>
+     
+      */
+
+
+
+
+
+ 
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll("nav a");
 
