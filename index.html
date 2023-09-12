@@ -1,112 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
- 
-  </head>
-  <body>
-
-  </div>
-
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muti Shuman - My Personal Website</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="parallax">
+        <div class="parallax-video">
+            <video autoplay loop muted id="bg-video">
+                <source src="images/blbck.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="parallax-content">
+            <header>
+                <h1>Muti Shuman</h1>
+                <p>Software Engineering Student &amp; Hobbyist</p>
+                <img src="images/picofme1.png" alt="Your Photo" />
+            </header>
+        </div>
+    </div>
     <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#projects">Projects</a></li>
-        
-        <li><a href="#contact">Contact</a></li>
-
-       
-      </ul>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
 
-    <!-- Header Section -->
-    <header>
-      <h1>Muti Shuman</h1>
-      <p>Software Engineering Student &amp; Hobbyist</p>
-      <img src="images/picofme1.png" alt="Your Photo" />
-    </header>
-
-    <!-- About Section -->
     <section id="about">
-      <h2>About Me</h2>
-      <p>
-        Hey! My Name is Muti Shuman and this is my personally coded portfolio.
-        Please feel free to browse my projects, resume or the contact me section
-        to reach out!
-      </p>
+        <h2>About Me</h2>
+        <p>
+            Hey! My Name is Muti Shuman, and this is my personally coded portfolio.
+            Please feel free to browse my projects, resume, or use the contact me section to reach out!
+        </p>
     </section>
 
-    <!-- Portfolio Section -->
     <section id="portfolio">
-      <h2>Portfolio</h2>
-      <div class="projectlinks">
-      <a href="https://docs.google.com/document/d/1BbMjRx6r9Sf81maGFn1nXdwQ6lzfsqYqYCgwQlMKxcs/edit?usp=sharing">My Resume</a>
-    </section>
-    <div>
-    <!-- Projects Section -->
-    <section id="projects">
-      <h2>Projects</h2>
-      <p>Check out some of my projects linked below:</p>
-      <li>
-        <a href="https://emotion.ai-camp.org/" target="_blank"
-          >AI Emotion Detector</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://docs.google.com/presentation/d/1EVZXclfxV-U5qsrRCuz_W_7lQFvbYk2d9s56zI6LqOI/edit#slide=id.gdc05ca4402_0_0"
-          target="_blank"
-          >Auto Desk Design Challenge</a
-        >
-      </li>
-     
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-      
-      <section id="contact">
-        <h2>Contact Me</h2>
-
-        <div class="contact-links">
-          <a href="mailto:mutishuman@gmail.com">Email</a>
-          <!--  <a href="Unavailable">Phone</a> add phone here later -->
-          <a href="https://www.linkedin.com/in/muti-b574a9158/">LinkedIn</a>
-          <a href="https://www.instagram.com/muti97/?hl=en">Instagram</a>
+        <h2>Portfolio</h2>
+        <div class="project-links">
+            <a href="https://docs.google.com/document/d/1BbMjRx6r9Sf81maGFn1nXdwQ6lzfsqYqYCgwQlMKxcs/edit?usp=sharing">My Resume</a>
         </div>
+    </section>
 
-        
-    
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Check out some of my projects linked below:</p>
+        <ul>
+            <li><a href="https://emotion.ai-camp.org/" target="_blank">AI Emotion Detector</a></li>
+            <li><a href="https://docs.google.com/presentation/d/1EVZXclfxV-U5qsrRCuz_W_7lQFvbYk2d9s56zI6LqOI/edit#slide=id.gdc05ca4402_0_0" target="_blank">Auto Desk Design Challenge</a></li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-links">
+            <a href="mailto:mutishuman@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/muti-b574a9158/">LinkedIn</a>
+            <a href="https://www.instagram.com/muti97/?hl=en">Instagram</a>
+        </div>
+        <p>Send me an Email below!</p>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required /><br />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required /><br />
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea><br />
+
+            <button type="submit">Send</button>
+            <div id="message-sent" style="display: none;">Message sent successfully!</div>
         </form>
-      </section>
-
-      <p>Send me an Email below!</p>
-      <form id="contact-form">
-        <!-- Form elements -->
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required /><br />
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required /><br />
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea
-        ><br />
-
-        <button type="submit">Send</button>
-        <div id="message-sent" style="display: none;">Message sent successfully!</div>
-
-        
-      </form>
     </section>
 
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
-

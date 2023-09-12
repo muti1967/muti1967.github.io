@@ -8,63 +8,49 @@ body, ul, li {
 /* Basic styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
-    background-image: url("your-background-image.jpg"); /* Replace with your image URL */
+}
+
+.parallax {
+    background-image: url('images/blbck.mp4');
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
+    min-height: 100vh;
+    position: relative;
 }
 
-/* Header */
-/*
-@keyframes backgroundFlow {
-    0% {
-        background-color: #3498db; 
-    }
-    25% {
-        background-color: #9b59b6; 
-    50% {
-        background-color: #2980b9; 
-    }
-    75% {
-        background-color: #8e44ad; 
-    }
-    100% {
-        background-color: #3498db; 
-    }
+.parallax-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
-*/
-header {
+
+.parallax-video video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.parallax-content {
+    position: relative;
+    z-index: 1;
     text-align: center;
-    animation: backgroundFlow 10s linear infinite;
-    color: #fff;
-    padding: 50px;
+    color: #ffffff;
+    padding: 20px;
 }
-
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-size: 1.2rem;
-    opacity: 0.8;
-}
-
-header img {
-    max-width: 200px;
-    height: auto;
-    margin-top: 20px;
-    border-radius: 25%;
-    border: 10px solid #333;
-}
-
 
 /* Navigation Bar */
 nav {
-    background-color: rgba(51, 51, 51, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
 }
 
 nav ul {
@@ -164,14 +150,6 @@ label {
     font-weight: bold;
     margin-bottom: 5px;
 }
-.parallax {
-    background-image: url('images/background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    min-height: 10vh;
-    position: relative;
-}
 
 input[type="text"],
 input[type="email"],
@@ -198,25 +176,6 @@ button[type="submit"]:hover {
     background-color: #ff6600;
 }
 
-nav a.active {
-    color: #ff9900;
-}
-
-#projects li {
-    margin-bottom: 10px;
-}
-
-#projects li a {
-    text-decoration: none;
-    color: #a06e04;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-#projects li a:hover {
-    color: #000000;
-}
-
 .contact-links a {
     text-decoration: none;
     color: #a06e04;
@@ -229,27 +188,17 @@ nav a.active {
     transform: scale(1.1);
 }
 
-.projectlinks a {
+.project-links a {
     text-decoration: none;
     color: #a06e04;
     font-weight: bold;
     transition: color 0.3s, transform 0.3s;
 }
 
-.projectlinks a:hover {
+.project-links a:hover {
     color: #000000;
     transform: scale(1.1);
 }
-
-#easter-egg-link {
-    width: 100px;
-    height: 100px;
-    background-color: #ffec40;
-    border-radius: 50%;
-    display: inline-block;
-    transition: all 0.5s;
-}
-
 
 @media (max-width: 768px) {
     header {
@@ -271,4 +220,20 @@ nav a.active {
     #about, #portfolio, #projects, #contact {
         padding: 10px;
     }
+}
+/* Parallax effect for video background */
+.video-background {
+    position: relative;
+    overflow: hidden;
+}
+
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transform: translate3d(0, 0, 0);
 }
