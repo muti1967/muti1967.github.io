@@ -1,13 +1,9 @@
 // Form submission
 const contactForm = document.getElementById('contact-form');
 contactForm.addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent the form from submitting wihtout info
+    event.preventDefault();
 
-    // Fetch form data
     const formData = new FormData(contactForm);
-
-//will complete API when i have a chance next project
-
 
     fetch('your-server-endpoint', {
         method: 'POST',
@@ -15,47 +11,12 @@ contactForm.addEventListener('submit', function (event) {
     })
         .then(response => response.json())
         .then(data => {
-            //show a success message
             console.log(data);
         })
         .catch(error => {
-            // show an error message
             console.error(error);
         });
 });
-
-//cool effects section
-
-const parallax = document.querySelector('.parallax');
-let scrollValue = 0;
-
-function moveBackgroundVertical() {
-    scrollValue += 0.1; // Adjust the increment to control the speed
-    parallax.style.backgroundPositionY = `${scrollValue}px`;
-
-    // Reset the position when it reaches the end
-    if (scrollValue >= window.innerHeight) {
-        scrollValue = 0;
-    }
-    requestAnimationFrame(moveBackgroundVertical);
-}
-
-moveBackgroundVertical(); // Start the animation
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -78,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
 const messageSentDiv = document.getElementById('message-sent');
 
 function handleSubmit(event) {
