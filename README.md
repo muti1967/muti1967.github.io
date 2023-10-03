@@ -1,1 +1,1 @@
-This is just a starter website to practice my coding skills :)
+This is just a starter website to display my portfolio practice my coding skills :)
