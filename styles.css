@@ -79,19 +79,7 @@ nav ul li a:hover::before {
 }
 
 /* Content and Profile Picture Layout */
-.content-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 120px 20px 50px; /* Add padding to accommodate the fixed nav */
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
-.text-content {
-    flex: 1;
-    padding-right: 20px;
-}
 
 #welcome h1, #about h2, #about p {
     margin: 0;
@@ -103,11 +91,25 @@ nav ul li a:hover::before {
     -webkit-text-fill-color: transparent;
     font-weight: bold;
 }
+.content-container {
+    display: flex;
+    justify-content: left; /* Ensure elements are spaced out */
+    align-items: normal;
+    padding: 120px 20px 1px; /* Add padding to accommodate the fixed nav */
+    max-width: 900px;
+    margin: 0 auto;
+
+}
+
+.text-content {
+    flex: 1;
+    margin-right: 102px; /* Add margin to push the image away */
+}
 
 .profile-picture {
     flex: 0 0 auto;
     display: flex;
-    justify-content: flex-end; /* Align the profile picture to the right */
+    justify-content: flex-end; /* Ensure the image stays on the right */
     align-items: flex-start;
 }
 
@@ -116,8 +118,27 @@ nav ul li a:hover::before {
     height: auto;
     border-radius: 50%; /* Makes the image oval */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    margin: 0; /* Remove any default margin */
 }
 
+
+
+/*
+.profile-picture {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: flex-start;
+}
+
+
+.profile-picture img {
+    width: 200px; 
+    height: auto;
+    border-radius: 50%; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+*/
 /* Seamless Section Styles */
 section {
     margin: 0;
