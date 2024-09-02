@@ -7,13 +7,9 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div id="top"></div>
     <div class="logo">
-            <a href="#top">
-              <img src="files/logoms.png" alt="Logo" />
-            </a>
-          </div>
-     
+      <img src="files/log
+      <img src="files/logoms.jpeg" alt="Logo" />
     </div>
     <nav>
       <ul>
@@ -52,17 +48,18 @@
           </p>
         </section>
       </div>
-      <div class="profile-picture">
-        <img src="files/picofme1.png" alt="Muti Shuman" />
-      </div> 
     </div>
+
+    <div class="profile-picture">
+        <img src="files/picofme1.png" alt="Muti Shuman" />
+    </div>     
 
     <div class="container">
       <!-- Portfolio Section -->
       <section id="portfolio" class="half-section">
         <h2>My Resume</h2>
         <div class="project-links">
-          <a href="files/Public Resume Muti Shuman (1).pdf" target="_blank" class="view-resume-button">View My Resume</a>
+          <a href="files/Public Resume Muti Shuman (1).pdf" target="_blank">My Resume</a>
         </div>
       </section>
 
@@ -92,8 +89,8 @@
 
     <!-- Contact Section -->
     <section id="contact" class="full-section">
+      <h2>Contact Me</h2>
       <div id="contact-section">
-        <h2>Contact Me</h2>
         <button id="contact-dropdown">Fill Out the Contact Form</button>
         <div id="contact-form-container">
           <form id="contact-form">

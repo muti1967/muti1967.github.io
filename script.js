@@ -38,4 +38,40 @@
         document.getElementById('contact-form').reset();
     });
 });
+
+// Toggle dropdown form visibility
+// Toggle dropdown form visibility
+document.getElementById('contact-dropdown').addEventListener('click', function() {
+    var contactFormContainer = document.getElementById('contact-form-container');
+    if (contactFormContainer.style.display === 'none' || contactFormContainer.style.display === '') {
+        contactFormContainer.style.display = 'block';
+    } else {
+        contactFormContainer.style.display = 'none';
+    }
+});
 */
+// Toggle dropdown form visibility and scroll smoothly to the form
+document.getElementById('contact-dropdown').addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    var contactFormContainer = document.getElementById('contact-form-container');
+
+    // Toggle visibility
+    if (contactFormContainer.style.display === 'none' || contactFormContainer.style.display === '') {
+        contactFormContainer.style.display = 'block';
+    } else {
+        contactFormContainer.style.display = 'none';
+    }
+
+    // Smoothly scroll to the form
+    contactFormContainer.scrollIntoView({
+        behavior: 'smooth'
+    });
+});
+
+document.querySelector('.logo a').addEventListener('click', function(e) {
+    e.preventDefault(); // Prevent the default anchor click behavior
+    document.querySelector('#top').scrollIntoView({
+        behavior: 'smooth'
+    });
+});
