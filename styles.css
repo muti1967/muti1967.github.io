@@ -26,14 +26,14 @@ nav {
 }
 .logo {
     position: fixed; /* Keeps the logo fixed in place */
-    top: 3px; /* Adjusts how far down the logo is from the top */
+    top: 5px; /* Adjusts how far down the logo is from the top */
     left: 15px; /* Adjusts how far right the logo is from the left */
     transform: translate(0, 10px); /* Fine-tunes the positioning */
     z-index: 1001; /* Ensure the logo stays above the navigation bar */
 }
 
 .logo img {
-    max-width: 40px; /* Adjust logo size as needed */
+    max-width: 110px; /* Adjust logo size as needed */
 }
 
 nav ul {
@@ -299,7 +299,7 @@ section {
     height: auto;
     transition: transform 0.3s ease;
 }
-    
+
 */
 .project-card img {
     width: 100%;
@@ -373,4 +373,21 @@ section {
 
 html {
     scroll-behavior: smooth;
+}
+
+.social-media-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-media-icons a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-media-icons a img:hover {
+    transform: scale(1.1);
 }
