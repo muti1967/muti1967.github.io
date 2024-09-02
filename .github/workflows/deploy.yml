@@ -1,0 +1,23 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # branch to deploy from
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Deploy to GitHub Pages
+      uses: actions/deploy-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: gh-pages  #  where the site will be deployed
