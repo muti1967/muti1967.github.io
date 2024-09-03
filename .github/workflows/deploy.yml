@@ -16,9 +16,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Build your site here if needed
+      # Uncomment and modify this section if you have a build step
       # - name: Build the site
-      #   run: npm run build # Use your actual build command
+      #   run: npm run build # Replace with your actual build command
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
@@ -28,3 +28,5 @@ jobs:
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages # This should match the artifact name in the upload step
