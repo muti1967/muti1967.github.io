@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main # branch to deploy from
+      - main # branch to deplohy from
 
 permissions:
   id-token: write
