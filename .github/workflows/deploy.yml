@@ -16,9 +16,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
-        
+      # Build your site here if needed
+      # - name: Build the site
+      #   run: npm run build # Use your actual build command
+
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
@@ -27,5 +28,3 @@ jobs:
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }} # This is optional as GitHub uses this token by default
