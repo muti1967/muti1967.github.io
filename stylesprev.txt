@@ -81,13 +81,29 @@ nav ul li a:hover::before {
     margin: 0;
 }
 
-.gradient-text {
-    background: linear-gradient(to right, #0000ff, #ffffff);
+/* Welcome Section */
+#welcome h1 {
+    font-size: 3em; /* Adjust this value to make the text larger or smaller */
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+#welcome .gradient-text {
+    font-size: 1.2em; /* You can adjust this separately if you want the name part to be different in size */
+    background: linear-gradient(to right, #5e59f3, #b1c0ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
 }
-
+/*
+.gradient-text {
+    background: linear-gradient(to right, #8888fe, #905ac3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+*/
 .content-container {
     display: flex;
     justify-content: left; /* Ensure elements are spaced out */
@@ -112,7 +128,7 @@ nav ul li a:hover::before {
 }
 
 .profile-picture img {
-    width: 200px; /* Fixed width for the profile picture */
+    width: 300px; /* Fixed width for the profile picture */
     height: auto;
     border-radius: 50%; /* Makes the image oval */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
@@ -473,3 +489,31 @@ html {
     background-color: #ff5722;
     transform: translateY(-3px);
 }
+
+.emoji {
+    width: 1.2em; /* Adjust size as needed */
+    height: auto;
+    vertical-align: middle; /* Aligns the emoji with the text */
+    margin-left: 5px; /* Adds some space between "Howdy" and the emoji */
+}
+
+#message-sent {
+    display: none; /* Initially hidden */
+    color: #00ff00; /* Green text */
+    margin-top: 20px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#send-button {
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+#send-button:disabled {
+    opacity: 0.7;
+}
+
+#send-button:disabled:hover {
+    transform: none; /* Prevent hover effects on disabled button */
+}
+

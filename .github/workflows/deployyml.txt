@@ -1,0 +1,32 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # branch to deploy from
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Uncomment and modify this section if you have a build step
+      # - name: Build the site
+      #   run: npm run build # Replace with your actual build command
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: github-pages
+          path: ./dist # Replace with the output directory of your build
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages # This should match the artifact name in the upload step

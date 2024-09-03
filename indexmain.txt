@@ -16,7 +16,7 @@
 
     <nav>
         <ul>
-            <li><a href="/aboutme.html">ABOUT ME</a></li>
+            <li><a href="#aboutme">ABOUT ME</a></li>
             <li><a href="#portfolio">MY RESUME</a></li>
             <li><a href="#projects">PROJECTS</a></li>
             <li><a href="#contact">CONTACT ME</a></li>
@@ -25,12 +25,15 @@
 
     <div class="content-container">
         <div class="text-content">
-            <section id="welcome">
-                <h1>
-                    Welcome to my page! I am
-                    <span class="gradient-text">Muti Shuman</span>.
-                </h1>
-            </section>
+          <section id="welcome">
+            <h1>
+                Howdy <img src="files/apple-wave.png" alt="Waving Hand" class="emoji"><br>             
+                I'm 
+                <span class="gradient-text">Muti Shuman</span>.
+            </h1>
+        </section>
+        
+        
             <section id="about" class="half-section">
                 <h2>About Me</h2>
                 <p>
@@ -75,7 +78,7 @@
                 </div>
                 <div class="project-card">
                     <img src="files/veggielution.jpeg" alt="Engineering 110 Community Outreach" />
-                    <a href="https://mshuman5.wixsite.com/engineering-110-port" target="_blank">Engineering 110 Community Outreach</a>
+                    <a href="files/Final_Report_SolarProject.pdf" target="_blank">Engineering 110 Community Outreach</a>
                 </div>
                 <div class="project-card">
                     <img src="files/autodeskdesign.png" alt="Auto Desk Design Challenge" />
@@ -95,35 +98,40 @@
           <div class="social-media-icons">
               <h2>Connect with Me</h2>
               <p class="connect-text">
-                  Feel free to connect with me on any of the platforms below. I look forward to connecting with you!
+                  Feel free to connect with me on any of the platforms below. I look forward to meeting you!
               </p>
               <div class="icons">
-                  <a href="https://www.linkedin.com" target="_blank">
+                  <a href="https://www.linkedin.com/in/muti-b574a9158/" target="_blank">
                       <img src="files/linkedin.png" alt="LinkedIn" />
                   </a>
-                  <a href="https://www.twitter.com" target="_blank">
-                      <img src="files/twitter.png" alt="Twitter" />
+                  <a href="mailto:mutishuman@gmail.com" target="_blank">
+                      <img src="files/email.png" alt="Email" />
                   </a>
-                  <a href="https://www.instagram.com" target="_blank">
+                  <a href="https://www.instagram.com/muti97/?hl=en" target="_blank">
                       <img src="files/instagram.png" alt="Instagram" />
                   </a>
-                  <a href="https://www.github.com" target="_blank">
+                  <a href="https://github.com/muti1967" target="_blank">
                       <img src="files/github.png" alt="GitHub" />
                   </a>
               </div>
           </div>
           <div id="contact-form-container">
               <h2>Contact Me</h2>
-              <form id="contact-form">
-                  <label for="name">Name:</label>
-                  <input type="text" id="name" name="name" required /><br />
-                  <label for="email">Email:</label>
-                  <input type="email" id="email" name="email" required /><br />
-                  <label for="message">Message:</label>
-                  <textarea id="message" name="message" rows="4" required></textarea><br />
-                  <button type="submit">Send</button>
-                  <div id="message-sent" style="display: none">Message sent successfully!</div>
-              </form>
+           <form id="contact-form" method="POST" action="https://formspree.io/f/xnnarngz">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required /><br />
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required /><br />
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" required></textarea><br />
+    <button type="submit" id="send-button">Send</button>
+</form>
+<div id="message-sent" style="display: none; font-size: 1.2em; color: #28a745; margin-top: 20px; text-align: center;">
+    &#10004; Your message has been sent!
+</div>
+
+            
+            
           </div>
       </div>
   </section>

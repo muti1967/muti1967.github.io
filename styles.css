@@ -14,16 +14,17 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    width: 96%; /*move bar to right*/
+    width: 96%; /* Adjust navigation width */
     padding: 20px;
     z-index: 1000;
     background: rgba(0, 0, 0, 0.6);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(15px);
     display: flex;
-    justify-content: right; /* Space between the logo and navigation links */
+    justify-content: flex-end; /* Align navigation items to the right */
     align-items: center;
 }
+
 .logo {
     position: fixed; /* Keeps the logo fixed in place */
     top: 5px; /* Adjusts how far down the logo is from the top */
@@ -96,14 +97,7 @@ nav ul li a:hover::before {
     -webkit-text-fill-color: transparent;
     font-weight: bold;
 }
-/*
-.gradient-text {
-    background: linear-gradient(to right, #8888fe, #905ac3);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
-}
-*/
+
 .content-container {
     display: flex;
     justify-content: left; /* Ensure elements are spaced out */
@@ -130,7 +124,7 @@ nav ul li a:hover::before {
 .profile-picture img {
     width: 300px; /* Fixed width for the profile picture */
     height: auto;
-    border-radius: 50%; /* Makes the image oval */
+    border-radius: 50%; /* Makes the image circular */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
     margin: 0; /* Remove any default margin */
 }
@@ -157,16 +151,6 @@ section {
     margin-bottom: 20px;
     transition: color 0.3s ease, transform 0.3s ease;
 }
-/*
-#contact-section:hover h2 {
-    color: #ff5722;
-    transform: translateY(-3px);
-}
-*/
-/*
-#contact-form-container {
-    display: none;  } Initially hidden */
-
 
 #contact-form {
     max-width: 600px;
@@ -279,7 +263,7 @@ section {
 /* Project Section Title */
 #projects h2 {
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2em;
     margin-bottom: 40px;
     color: #ffffffed;
     font-family: 'Montserrat', sans-serif; /* Nicer, modern font */
@@ -309,14 +293,6 @@ section {
     flex-direction: column; /* Ensures content is aligned vertically */
 }
 
-/*
-.project-card img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
-}
-
-*/
 .project-card img {
     width: 100%;
     height: 300px; /* Set a consistent height for all images */
@@ -325,7 +301,6 @@ section {
     margin: 0; /* Ensure no additional margin */
     padding: 0; /* Ensure no additional padding */
 }
-
 
 .project-card a {
     display: block;
@@ -353,21 +328,45 @@ section {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
     .content-container {
         flex-direction: column;
         align-items: center;
+        padding: 20px 10px;
     }
 
-    .profile-picture {
-        margin-top: 40px;
+    .profile-picture img {
+        width: 200px; /* Smaller profile picture on mobile */
     }
 
-    .half-section, .full-section {
-        width: 100%;
+    .project-cards {
+        flex-direction: column; /* Stack project cards vertically on mobile */
+        align-items: center;
     }
 
-    .project-card {
-        width: 100%;
+    .icons {
+        gap: 30px; /* Adjust gap between icons on mobile */
+    }
+
+    .view-resume-button, #contact-form button {
+        width: 100%; /* Full width buttons on mobile */
+    }
+
+    #welcome h1 {
+        font-size: 2.5em; /* Adjust heading size on mobile */
+    }
+
+    .gradient-text {
+        font-size: 1.5em; /* Adjust text size on mobile */
+    }
+
+    #about, #portfolio, #projects {
+        padding: 20px;
     }
 }
 
@@ -385,11 +384,37 @@ section {
     .project-card {
         width: 100%; /* Single column layout on small screens */
     }
+
+    .profile-picture img {
+        width: 120px;
+    }
+
+    .connect-text {
+        font-size: 1em; /* Smaller text for mobile */
+    }
+
+    .icons {
+        gap: 15px;
+    }
+
+    .view-resume-button, #contact-form button {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    #welcome h1 {
+        font-size: 2em;
+    }
+
+    .gradient-text {
+        font-size: 1.2em;
+    }
 }
 
 html {
     scroll-behavior: smooth;
 }
+
 /* Social Media and Contact Section */
 .contact-social-container {
     display: flex;
@@ -516,4 +541,3 @@ html {
 #send-button:disabled:hover {
     transform: none; /* Prevent hover effects on disabled button */
 }
-
