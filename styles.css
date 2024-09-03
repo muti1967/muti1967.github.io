@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    background-color: #0e0e0e; /* Black background */
+    background-color: #000000; /* Black background */
     color: #fff; /* White text */
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -81,13 +81,29 @@ nav ul li a:hover::before {
     margin: 0;
 }
 
-.gradient-text {
-    background: linear-gradient(to right, #0000ff, #ffffff);
+/* Welcome Section */
+#welcome h1 {
+    font-size: 3em; /* Adjust this value to make the text larger or smaller */
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+#welcome .gradient-text {
+    font-size: 1.2em; /* You can adjust this separately if you want the name part to be different in size */
+    background: linear-gradient(to right, #5e59f3, #b1c0ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
 }
-
+/*
+.gradient-text {
+    background: linear-gradient(to right, #8888fe, #905ac3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+*/
 .content-container {
     display: flex;
     justify-content: left; /* Ensure elements are spaced out */
@@ -112,7 +128,7 @@ nav ul li a:hover::before {
 }
 
 .profile-picture img {
-    width: 200px; /* Fixed width for the profile picture */
+    width: 300px; /* Fixed width for the profile picture */
     height: auto;
     border-radius: 50%; /* Makes the image oval */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
@@ -147,10 +163,10 @@ section {
     transform: translateY(-3px);
 }
 */
-
+/*
 #contact-form-container {
-    display: none; /* Initially hidden */
-}
+    display: none;  } Initially hidden */
+
 
 #contact-form {
     max-width: 600px;
@@ -374,20 +390,130 @@ section {
 html {
     scroll-behavior: smooth;
 }
+/* Social Media and Contact Section */
+.contact-social-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
 .social-media-icons {
     display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 20px;
+    flex-direction: column; /* Stack title, text, and icons vertically */
+    align-items: center;
+    margin-right: 40px; /* Space between social icons and form */
 }
 
-.social-media-icons a img {
+.social-media-icons h2 {
+    font-size: 2em;
+    margin-bottom: 20px; /* Increased space below the title */
+    color: #ffffffed;
+    text-align: center;
+}
+
+.connect-text {
+    font-size: 1.2em;
+    margin-bottom: 70px; /* Increased space below the sentence */
+    color: #ffffff;
+    text-align: center;
+    max-width: 300px; /* Limit the width of the text */
+}
+
+.icons {
+    display: flex;
+    gap: 70px; /* Increased space between the icons */
+    justify-content: center; /* Center the icons horizontally */
+}
+
+.icons a img {
     width: 40px;
     height: 40px;
     transition: transform 0.3s ease;
 }
 
-.social-media-icons a img:hover {
+.icons a img:hover {
     transform: scale(1.1);
 }
+
+#contact-form-container {
+    max-width: 600px;
+    flex: 1;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+#contact-form label {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#contact-form input, #contact-form textarea {
+    padding: 15px;
+    font-size: 1em;
+    border: 2px solid #224eff;
+    background-color: #111;
+    color: #fff;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+#contact-form input:focus, #contact-form textarea:focus {
+    border-color: #224eff;
+    background-color: #222;
+    outline: none;
+}
+
+#contact-form button {
+    padding: 15px;
+    font-size: 1.2em;
+    border: none;
+    background-color: #224eff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: #ff5722;
+    transform: translateY(-3px);
+}
+
+.emoji {
+    width: 1.2em; /* Adjust size as needed */
+    height: auto;
+    vertical-align: middle; /* Aligns the emoji with the text */
+    margin-left: 5px; /* Adds some space between "Howdy" and the emoji */
+}
+
+#message-sent {
+    display: none; /* Initially hidden */
+    color: #00ff00; /* Green text */
+    margin-top: 20px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#send-button {
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+#send-button:disabled {
+    opacity: 0.7;
+}
+
+#send-button:disabled:hover {
+    transform: none; /* Prevent hover effects on disabled button */
+}
+

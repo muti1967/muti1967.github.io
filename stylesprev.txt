@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    background-color: #000; /* Black background */
+    background-color: #000000; /* Black background */
     color: #fff; /* White text */
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -24,16 +24,16 @@ nav {
     justify-content: right; /* Space between the logo and navigation links */
     align-items: center;
 }
-
 .logo {
-    position: fixed; /* Normal flow positioning */
-    left: 0; /* Align to the left */
-    transform: none; /* Remove centering transform */
+    position: fixed; /* Keeps the logo fixed in place */
+    top: 5px; /* Adjusts how far down the logo is from the top */
+    left: 15px; /* Adjusts how far right the logo is from the left */
+    transform: translate(0, 10px); /* Fine-tunes the positioning */
     z-index: 1001; /* Ensure the logo stays above the navigation bar */
 }
 
 .logo img {
-    max-width: 50px; /* Adjust logo size as needed */
+    max-width: 110px; /* Adjust logo size as needed */
 }
 
 nav ul {
@@ -87,10 +87,11 @@ nav ul li a:hover::before {
     -webkit-text-fill-color: transparent;
     font-weight: bold;
 }
+
 .content-container {
     display: flex;
     justify-content: left; /* Ensure elements are spaced out */
-    align-items: normal;
+    align-items: flex-start;
     padding: 120px 20px 1px; /* Add padding to accommodate the fixed nav */
     max-width: 900px;
     margin: 0 auto;
@@ -98,7 +99,7 @@ nav ul li a:hover::before {
 
 .text-content {
     flex: 1;
-    margin-right: 102px; /* Add margin to push the image away */
+    margin-right: 20px; /* Add margin to push the image away */
 }
 
 .profile-picture {
@@ -106,6 +107,8 @@ nav ul li a:hover::before {
     display: flex;
     justify-content: flex-end; /* Ensure the image stays on the right */
     align-items: flex-start;
+    margin-top: 90px; /* Move the image lower */
+    margin-left: 100px; /* Move the image to the right */
 }
 
 .profile-picture img {
@@ -133,9 +136,21 @@ section {
     text-align: center;
 }
 
-#contact-form-container {
-    display: none; /* Initially hidden */
+#contact-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
+/*
+#contact-section:hover h2 {
+    color: #ff5722;
+    transform: translateY(-3px);
+}
+*/
+/*
+#contact-form-container {
+    display: none;  } Initially hidden */
+
 
 #contact-form {
     max-width: 600px;
@@ -182,7 +197,7 @@ section {
 }
 
 #contact-form button:hover {
-    background-color: #224eff;
+    background-color: #ff5722;
     transform: translateY(-3px);
 }
 
@@ -192,8 +207,24 @@ section {
 }
 
 .project-links {
-    display: inline-block; /* This will allow the link to be centered */
     margin-top: 20px;
+}
+
+.view-resume-button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    background-color: #224eff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.view-resume-button:hover {
+    background-color: #ff5722;
+    transform: translateY(-3px);
 }
 
 /* Dropdown Menu for Contact Form */
@@ -211,8 +242,22 @@ section {
 }
 
 #contact-dropdown:hover {
-    background-color: #224eff;
+    background-color: #ff5722;
     transform: translateY(-3px);
+}
+
+/* Easter Egg Link */
+#easteregg {
+    color: #000; /* Black text */
+    text-decoration: none;
+    font-size: 1.2em;
+    display: block;
+    text-align: center;
+    margin-top: 20px; /* Space it below the contact section */
+}
+
+#easteregg:hover {
+    color: #224eff; /* Turns blue on hover */
 }
 
 /* Project Section Title */
@@ -240,16 +285,31 @@ section {
     text-align: center;
     width: 100%;
     max-width: 320px; /* Ensures consistent card size */
+    height: 100%; /* Make sure all cards are the same height */
     margin: 0 auto;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column; /* Ensures content is aligned vertically */
 }
 
+/*
 .project-card img {
     width: 100%;
     height: auto;
     transition: transform 0.3s ease;
 }
+
+*/
+.project-card img {
+    width: 100%;
+    height: 300px; /* Set a consistent height for all images */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    transition: transform 0.3s ease;
+    margin: 0; /* Ensure no additional margin */
+    padding: 0; /* Ensure no additional padding */
+}
+
 
 .project-card a {
     display: block;
@@ -277,8 +337,13 @@ section {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-    .container {
+    .content-container {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-picture {
+        margin-top: 40px;
     }
 
     .half-section, .full-section {
@@ -304,4 +369,107 @@ section {
     .project-card {
         width: 100%; /* Single column layout on small screens */
     }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+/* Social Media and Contact Section */
+.contact-social-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-media-icons {
+    display: flex;
+    flex-direction: column; /* Stack title, text, and icons vertically */
+    align-items: center;
+    margin-right: 40px; /* Space between social icons and form */
+}
+
+.social-media-icons h2 {
+    font-size: 2em;
+    margin-bottom: 20px; /* Increased space below the title */
+    color: #ffffffed;
+    text-align: center;
+}
+
+.connect-text {
+    font-size: 1.2em;
+    margin-bottom: 70px; /* Increased space below the sentence */
+    color: #ffffff;
+    text-align: center;
+    max-width: 300px; /* Limit the width of the text */
+}
+
+.icons {
+    display: flex;
+    gap: 70px; /* Increased space between the icons */
+    justify-content: center; /* Center the icons horizontally */
+}
+
+.icons a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.icons a img:hover {
+    transform: scale(1.1);
+}
+
+#contact-form-container {
+    max-width: 600px;
+    flex: 1;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+#contact-form label {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#contact-form input, #contact-form textarea {
+    padding: 15px;
+    font-size: 1em;
+    border: 2px solid #224eff;
+    background-color: #111;
+    color: #fff;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+#contact-form input:focus, #contact-form textarea:focus {
+    border-color: #224eff;
+    background-color: #222;
+    outline: none;
+}
+
+#contact-form button {
+    padding: 15px;
+    font-size: 1.2em;
+    border: none;
+    background-color: #224eff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: #ff5722;
+    transform: translateY(-3px);
 }
