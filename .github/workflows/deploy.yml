@@ -3,21 +3,38 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main # branch to deplohy from
+      - main # branch to deploy from
 
 permissions:
   id-token: write
   contents: read
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      # Step to install dependencies (if necessary)
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install # Use the appropriate command for your project
+
+      - name: Build the site
+        run: npm run build # Replace with your build command
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: github-pages
+          path: ./dist # Replace with the output directory of your build
+
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages #  where the site will be deployed
+          token: ${{ secrets.GITHUB_TOKEN }} # This is optional as GitHub uses this token by default
