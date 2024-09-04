@@ -350,17 +350,3 @@ nav ul li a {
     max-width: 80px;
 }
 
-/* Welcome Section */
-#welcome h1 {
-    font-size: 2.5em; /* Adjust text size for mobile */
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-#welcome .gradient-text {
-    font-size: 1.5em; /* Increase for emphasis on mobile */
-    background: linear-gradient(to right, #5e59f3, #b1c0ff); /* Blue to light blue gradient */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; /* Transparent fill to show the gradient */
-    font-weight: bold;
-}
