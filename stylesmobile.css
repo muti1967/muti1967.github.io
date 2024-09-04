@@ -1,0 +1,279 @@
+/* General Styles */
+body {
+    background-color: #000000; /* Black background */
+    color: #fff; /* White text */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Logo and Navigation Menu */
+nav {
+    width: 100%;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Darker for mobile */
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    text-align: center;
+    margin-top: 60px; /* Push the logo below the navbar */
+}
+
+.logo img {
+    width: 80px; /* Smaller logo for mobile */
+}
+
+/* Navigation Links */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 1.1em;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* Welcome Section */
+#welcome {
+    padding-top: 150px; /* Space for the fixed nav */
+    text-align: center;
+}
+
+#welcome h1 {
+    font-size: 2.2em; /* Smaller for mobile */
+    margin-bottom: 15px;
+}
+
+#welcome .gradient-text {
+    font-size: 1.5em;
+    background: linear-gradient(to right, #5e59f3, #b1c0ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+/* About Section */
+#about {
+    padding: 20px;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.2em;
+    line-height: 1.4;
+}
+
+/* Profile Picture */
+.profile-picture {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+/* Portfolio Section */
+#portfolio {
+    padding: 20px;
+    text-align: center;
+}
+
+.project-links {
+    margin-top: 20px;
+}
+
+.view-resume-button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #224eff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.view-resume-button:hover {
+    background-color: #ff5722;
+}
+
+/* Projects Section */
+#projects {
+    padding: 20px;
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.project-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.project-card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.project-card a {
+    color: #224eff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-card:hover a {
+    color: #ff5722;
+}
+
+/* Contact Section */
+#contact {
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-social-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-media-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-media-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Contact Form */
+#contact-form-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #111;
+    border-radius: 10px;
+}
+
+#contact-form label {
+    font-size: 1.2em;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 15px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+#contact-form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2em;
+    background-color: #224eff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #ff5722;
+}
+
+/* Responsive Tweaks for Small Screens */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #welcome h1 {
+        font-size: 2em;
+    }
+
+    .profile-picture img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .project-cards {
+        flex-direction: column;
+    }
+
+    #projects h2, #about h2 {
+        font-size: 1.6em;
+    }
+}
+
+@media (max-width: 480px) {
+    #welcome h1 {
+        font-size: 1.8em;
+    }
+
+    .profile-picture img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .view-resume-button,
+    #contact-form button {
+        font-size: 1em;
+        padding: 8px;
+    }
+}
