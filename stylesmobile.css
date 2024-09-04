@@ -157,7 +157,7 @@ nav ul li a {
 
 /* View Resume Button */
 .view-resume-button {
-    display: inline-block;
+    display: block; /* Ensure it's treated as a block-level element */
     padding: 10px 20px;
     font-size: 1.2em;
     border: none;
@@ -166,9 +166,16 @@ nav ul li a {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    margin: 20px 0;
+    margin: 20px auto; /* Automatically center it horizontally */
     text-align: center;
+    max-width: 200px; /* Optional: Limit the button width */
 }
+
+.view-resume-button:hover {
+    background-color: #ff5722;
+    transform: translateY(-3px);
+}
+
 
 .view-resume-button:hover {
     background-color: #ff5722;
@@ -279,4 +286,53 @@ nav ul li a {
     .project-card {
         max-width: 280px;
     }
+}
+
+/* Contact Form Container */
+#contact-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the form content */
+    padding: 20px;
+    max-width: 100%;
+    margin: 0 auto; /* Centers the container */
+}
+
+/* Contact Form */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the form inputs and button */
+    gap: 10px;
+    padding: 20px;
+    max-width: 400px; /* Optional: Limit form width */
+    width: 100%; /* Ensure it spans the full width of its container */
+}
+
+/* Social Media Icons Container */
+.contact-social-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the social media content */
+    padding: 40px 20px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Social Media Icons */
+.icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center; /* Centers the icons */
+    margin-top: 20px;
+}
+
+.icons a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.icons a img:hover {
+    transform: scale(1.1);
 }
