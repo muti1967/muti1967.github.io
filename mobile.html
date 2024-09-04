@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Muti Shuman - My Personal Website</title>
     <link rel="stylesheet" href="stylesmobile.css" />
+    <script>
+      function toggleMenu() {
+        const navLinks = document.getElementById('nav-links');
+        navLinks.classList.toggle('show-menu');
+      }
+    </script>
   </head>
   <body>
     <div id="top"></div>
@@ -15,7 +21,8 @@
     </div>
 
     <nav>
-      <ul>
+      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger Icon -->
+      <ul id="nav-links">
         <li><a href="#aboutme">ABOUT ME</a></li>
         <li><a href="#portfolio">MY RESUME</a></li>
         <li><a href="#projects">PROJECTS</a></li>
@@ -27,42 +34,41 @@
       <div class="text-content">
         <section id="welcome">
           <h1>
-            Howdy MOBILE VERSION
-            <img
-              src="files/apple-wave.png"
-              alt="Waving Hand"
-              class="emoji"
-            /><br />
+            Howdy
+            <img src="files/apple-wave.png" alt="Waving Hand" class="emoji" /><br />
             I'm
             <span class="gradient-text">Muti Shuman</span>.
           </h1>
-        </section>
-
-        <section id="about" class="half-section">
-          <h2>About Me</h2>
-          <p>
-            Hey! My Name is Muti Shuman and this is my personally coded
-            portfolio. Please feel free to browse my projects, resume, or the
-            contact me section to reach out! With over two years of work
-            experience in the technology industry, I am a passionate and skilled
-            Genius at Apple, where I repair devices and relationships with
-            customers and consumers. In addition to my work experience, I have a
-            strong interest and background in computer science and engineering.
-            I am currently pursuing a bachelor's degree at Santa Clara
-            University, where I am expanding my knowledge and skills in this
-            field. I am motivated by Apple's mission to create products that
-            empower people and enrich their lives, and I strive to deliver
-            exceptional service and support to every customer. I value teamwork,
-            diversity, and innovation, and I bring a positive and collaborative
-            attitude to my role.
+          <p class="intro-text">
+            I am currently studying Computer Science at Santa Clara University
+            and working at Apple as a Technician. Please feel free to check out
+            some of my projects below on my personally coded website!
           </p>
         </section>
       </div>
       <div class="profile-picture">
-        <img src="files/picofme1.png" alt="Muti Shuman" />
+        <img src="files/picofme7.png" alt="Muti Shuman" />
       </div>
     </div>
-
+    <div class="about-content">
+      <section id="about" class="half-section fade">
+        <p>
+          Hey! My Name is Muti Shuman and this is my personally coded portfolio.
+          Please feel free to browse my projects, resume, or the contact me
+          section to reach out! With over two years of work experience in the
+          technology industry, I am a passionate and skilled Genius at Apple,
+          where I repair devices and relationships with customers and consumers.
+          In addition to my work experience, I have a strong interest and
+          background in computer science and engineering. I am currently
+          pursuing a bachelor's degree at Santa Clara University, where I am
+          expanding my knowledge and skills in this field. I am motivated by
+          Apple's mission to create products that empower people and enrich
+          their lives, and I strive to deliver exceptional service and support
+          to every customer. I value teamwork, diversity, and innovation, and I
+          bring a positive and collaborative attitude to my role.
+        </p>
+      </section>
+    </div>
     <div class="container">
       <!-- Portfolio Section -->
       <section id="portfolio" class="half-section">

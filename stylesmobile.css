@@ -1,246 +1,270 @@
 /* General Styles */
 body {
-    background-color: #000000; /* Black background */
-    color: #fff; /* White text */
+    background-color: #000000;
+    color: #fff;
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
 }
 
-/* Logo and Navigation Menu */
-nav {
-    width: 100%;
-    padding: 10px 0;
-    background-color: rgba(0, 0, 0, 0.8); /* Darker for mobile */
-    text-align: center;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-}
-
+/* Logo */
 .logo {
-    text-align: center;
-    margin-top: 60px; /* Push the logo below the navbar */
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    z-index: 1001;
 }
 
 .logo img {
-    width: 80px; /* Smaller logo for mobile */
+    max-width: 80px;
 }
 
-/* Navigation Links */
+/* Navigation Styles */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-icon {
+    font-size: 2em;
+    cursor: pointer;
+    color: #fff;
+    display: none;
+}
+
+#nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* For Mobile (Hamburger Menu) */
+@media (max-width: 768px) {
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    #nav-links.show-menu {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    #nav-links li {
+        padding: 15px 0;
+    }
+}
+
+
 nav ul {
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
     display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-nav ul li {
-    display: inline;
+    gap: 10px; /* Reduce gap for mobile */
+    flex-direction: row; /* Keep nav items inline on mobile */
 }
 
 nav ul li a {
     color: #fff;
-    font-size: 1.1em;
     text-decoration: none;
     font-weight: bold;
-    padding: 10px;
+    font-size: 1em; /* Adjust font size for mobile */
+    position: relative;
 }
 
 /* Welcome Section */
-#welcome {
-    padding-top: 150px; /* Space for the fixed nav */
-    text-align: center;
-}
-
 #welcome h1 {
-    font-size: 2.2em; /* Smaller for mobile */
+    font-size: 2.5em; /* Adjust text size for mobile */
+    font-weight: bold;
     margin-bottom: 15px;
 }
 
 #welcome .gradient-text {
-    font-size: 1.5em;
-    background: linear-gradient(to right, #5e59f3, #b1c0ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
+    font-size: 1.5em; /* Increase for emphasis on mobile */
 }
 
-/* About Section */
-#about {
-    padding: 20px;
+.emoji {
+    width: 1.3em; /* Adjust emoji size */
+}
+
+/* Content Layout */
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 20px 1px;
+}
+
+.text-content {
+    max-width: 100%; /* Use full width for mobile */
     text-align: center;
-}
-
-#about h2 {
-    font-size: 1.8em;
     margin-bottom: 20px;
 }
 
-#about p {
-    font-size: 1.2em;
-    line-height: 1.4;
-}
-
-/* Profile Picture */
 .profile-picture {
+    margin-top: 20px;
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
 }
 
 .profile-picture img {
-    width: 150px;
+    width: 150px; /* Reduce image size for mobile */
     height: 150px;
     border-radius: 50%;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
 
-/* Portfolio Section */
-#portfolio {
-    padding: 20px;
+/* About Section */
+.about-content {
+    margin-top: 30px;
+    padding: 0 20px;
     text-align: center;
 }
 
-.project-links {
-    margin-top: 20px;
+#about p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    padding: 0;
 }
 
+/* View Resume Button */
 .view-resume-button {
+    display: inline-block;
     padding: 10px 20px;
     font-size: 1.2em;
+    border: none;
     background-color: #224eff;
     color: #fff;
-    border: none;
-    border-radius: 5px;
-    display: inline-block;
     text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 20px 0;
+    text-align: center;
 }
 
 .view-resume-button:hover {
     background-color: #ff5722;
+    transform: translateY(-3px);
 }
 
-/* Projects Section */
-#projects {
-    padding: 20px;
-    text-align: center;
-}
-
+/* Project Section */
 #projects h2 {
-    font-size: 1.8em;
-    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
 }
 
 .project-cards {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.project-card {
-    background-color: #222;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.project-card img {
-    width: 100%;
-    max-height: 200px;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-
-.project-card a {
-    color: #224eff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.project-card:hover a {
-    color: #ff5722;
-}
-
-/* Contact Section */
-#contact {
-    padding: 20px;
-    text-align: center;
-}
-
-.contact-social-container {
-    display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stack projects vertically for mobile */
     gap: 20px;
     align-items: center;
 }
 
-.social-media-icons {
+.project-card {
+    width: 100%;
+    max-width: 300px; /* Set card width for mobile */
+    margin: 0 auto;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    flex-direction: column; /* Ensures content is aligned vertically */
 }
 
-.social-media-icons img {
-    width: 40px;
-    height: 40px;
+.project-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
     transition: transform 0.3s ease;
 }
 
-.social-media-icons img:hover {
-    transform: scale(1.1);
+.project-card a {
+    padding: 20px;
+    color: #224eff;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #111;
+    transition: background-color 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.9);
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+.project-card:hover a {
+    background-color: #224eff;
+    color: #fff;
 }
 
 /* Contact Form */
 #contact-form-container {
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
     padding: 20px;
-    background-color: #111;
-    border-radius: 10px;
+    max-width: 100%;
 }
 
-#contact-form label {
-    font-size: 1.2em;
+#contact-form {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
 }
 
-#contact-form input,
-#contact-form textarea {
-    width: 100%;
+#contact-form input, #contact-form textarea {
     padding: 10px;
     font-size: 1em;
-    margin-bottom: 15px;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    background-color: #333;
+    border: 2px solid #224eff;
+    background-color: #111;
     color: #fff;
-}
-
-#contact-form button {
-    width: 100%;
-    padding: 10px;
-    font-size: 1.2em;
-    background-color: #224eff;
-    color: white;
-    border: none;
     border-radius: 5px;
-    cursor: pointer;
 }
 
 #contact-form button:hover {
     background-color: #ff5722;
 }
 
-/* Responsive Tweaks for Small Screens */
-@media (max-width: 768px) {
+/* Responsive Design for Extra Small Phones */
+@media (max-width: 480px) {
     nav ul {
         flex-direction: column;
+        align-items: center;
         gap: 10px;
+    }
+
+    .content-container {
+        padding: 80px 10px 1px;
     }
 
     #welcome h1 {
@@ -252,28 +276,7 @@ nav ul li a {
         height: 120px;
     }
 
-    .project-cards {
-        flex-direction: column;
-    }
-
-    #projects h2, #about h2 {
-        font-size: 1.6em;
-    }
-}
-
-@media (max-width: 480px) {
-    #welcome h1 {
-        font-size: 1.8em;
-    }
-
-    .profile-picture img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .view-resume-button,
-    #contact-form button {
-        font-size: 1em;
-        padding: 8px;
+    .project-card {
+        max-width: 280px;
     }
 }

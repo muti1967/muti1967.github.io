@@ -126,3 +126,27 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         sendButton.removeEventListener('click', resetForm); // Remove this reset event listener
     }
 });
+// script.js
+// Toggle the mobile menu
+document.getElementById("menu-icon").addEventListener("click", function() {
+    var navMenu = document.getElementById("nav-menu");
+    navMenu.classList.toggle("show"); // Toggle the "show" class to display/hide the menu
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var aboutSection = document.querySelector('#about'); // The "About Me" section
+
+    // Ensure the section is hidden initially
+    aboutSection.classList.remove('show');
+
+    // Add scroll event listener
+    window.addEventListener('scroll', function () {
+      var scrollPosition = window.scrollY || window.pageYOffset; // Get scroll position
+
+      if (scrollPosition > 96) { // If scrolled down more than 96px
+        aboutSection.classList.add('show'); // Add class to fade in
+      } else {
+        aboutSection.classList.remove('show'); // Remove class to fade out
+      }
+    });
+  });
