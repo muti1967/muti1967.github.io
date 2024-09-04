@@ -336,3 +336,16 @@ nav ul li a {
 .icons a img:hover {
     transform: scale(1.1);
 }
+
+/* Logo */
+.logo {
+    position: fixed;
+    top: 10px;
+    left: 50%; /* Move to the center horizontally */
+    transform: translateX(-50%); /* Adjust position to account for the width of the logo */
+    z-index: 1001;
+}
+
+.logo img {
+    max-width: 80px;
+}
