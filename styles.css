@@ -89,6 +89,19 @@ nav ul li a:hover::before {
     margin-bottom: 20px;
     color: #ffffff;
 }
+/* For larger screens */
+@media (min-width: 1024px) {
+    #welcome {
+        padding-top: 120px; /* More space for larger screens */
+    }
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+    #welcome {
+        padding-top: 80px; /* Less space for smaller screens */
+    }
+}
 
 #welcome .gradient-text {
     font-size: 1.2em; /* You can adjust this separately if you want the name part to be different in size */
@@ -325,6 +338,10 @@ section {
     .view-resume-button, #contact-form button {
         width: 100%; /* Full width buttons on mobile */
     }
+/* Add this to your CSS to add space above the welcome section */
+#welcome {
+    padding-top: 200px; /* Adjust the value as needed */
+}
 
     #welcome h1 {
         font-size: 2.5em; /* Adjust heading size on mobile */
