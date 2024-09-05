@@ -122,9 +122,8 @@ nav ul li a {
     background: linear-gradient(to right, #ffffff, #ffffff); /* Blue to light blue gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; /* Transparent fill to show the gradient */
-    font-weight: bold;
-    font-family: 'Dancing Script', cursive; /* Apply Dancing Script font */
-
+    font-family: 'Impact', sans-serif;
+    font-size: 2em;
     
 }
 
