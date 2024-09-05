@@ -122,7 +122,7 @@ nav ul li a {
     background: linear-gradient(to right, #ffffff, #ffffff); /* Blue to light blue gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; /* Transparent fill to show the gradient */
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 100; /* Thin weight */
     font-size: 1.7em;
     line-height: 1.5;
