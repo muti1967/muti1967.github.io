@@ -480,6 +480,7 @@ section {
     width: 1.5em; /* Adjust the width to make it smaller */
     height: auto; /* Maintain aspect ratio */
     vertical-align: middle; /* Aligns the emoji with the text */
+    padding-bottom: 0.2in;
 }
 /* About Me paragraph styling */
 #about p {
