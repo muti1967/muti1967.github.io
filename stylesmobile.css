@@ -123,8 +123,7 @@ nav ul li a {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; /* Transparent fill to show the gradient */
     font-family: 'Inter', sans-serif;
-    font-weight: thin; /* Use different weights for thin, regular, or bold */
-    
+    font-weight: 100; /* Use different weights for thin, regular, or bold */
     
 }
 
