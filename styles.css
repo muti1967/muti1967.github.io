@@ -95,8 +95,10 @@ nav ul li a:hover::before {
     background: linear-gradient(to right, #ffffff, #ffffff); /* Blue to light blue gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; /* Transparent fill to show the gradient */
-    font-family: 'Impact', sans-serif;
-    font-size: 2em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100; /* Thin weight */
+    font-size: 3em;
+    line-height: 1.5;
    
 }
 
