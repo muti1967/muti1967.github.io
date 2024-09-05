@@ -79,6 +79,16 @@ nav ul li a:hover::before {
 }
 
 /* Welcome Section */
+* { color:#fff; text-decoration: none;}
+.typewrite > .wrap {
+    border-right: 0.08em solid #fff; /* Creates the typing cursor */
+    font-weight: bold; /* Optional: Makes the text bold */
+    font-size: 1.2em; /* Increase for emphasis on mobile */
+    background: linear-gradient(to right, #ffffff, #011df0); /* Blue to light blue gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Transparent fill to show the gradient */
+}
+
 
 #welcome .Howdy {
     font-size: 1.5em; /* Increase for emphasis on mobile */
@@ -92,7 +102,7 @@ nav ul li a:hover::before {
 
 #welcome .im-word {
     font-size: 1.2em; /* Increase for emphasis on mobile */
-    background: linear-gradient(to right, #ffffff, #b1c0ff); /* Blue to light blue gradient */
+    background: linear-gradient(to right, #ffffff, #ffffff); /* Blue to light blue gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; /* Transparent fill to show the gradient */
     font-weight: bold;
@@ -519,7 +529,7 @@ section {
 
 #about h2 {
     text-align: left;
-    margin-left: 2.72in; /* Moves the title 1 inch to the right */
+    padding-left: 15%; /* Adjust percentage as needed */
 }
 
 #about p {
@@ -528,8 +538,8 @@ section {
     line-height: 1.8;
     margin-top: 20px;
     max-width: 100%;
-    padding-left: 2.72in; /* 1 inch from the left */
-    padding-right: 3in; /* 1 inch from the right */
+    padding-left: 15%; /* Adjust percentage as needed */
+    padding-right: 15%; /* Adjust percentage as needed */
 }
 
 
@@ -559,3 +569,8 @@ section {
         max-width: 100%;
     }
 }
+
+html {
+    scroll-behavior: smooth;
+  }
+  

@@ -101,6 +101,15 @@ nav ul li a {
 }
 
 /* Welcome Section */
+* { color:#fff; text-decoration: none;}
+.typewrite > .wrap {
+    border-right: 0.08em solid #fff; /* Creates the typing cursor */
+    font-weight: bold; /* Optional: Makes the text bold */
+    font-size: 1.2em; /* Increase for emphasis on mobile */
+    background: linear-gradient(to right, #ffffff, #011df0); /* Blue to light blue gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Transparent fill to show the gradient */
+}
 #welcome h1 {
     font-size: 2.5em; /* Adjust text size for mobile */
     font-weight: bold;
@@ -121,7 +130,7 @@ nav ul li a {
 
 #welcome .im-word {
     font-size: 1.2em; /* Increase for emphasis on mobile */
-    background: linear-gradient(to right, #ffffff, #b1c0ff); /* Blue to light blue gradient */
+    background: linear-gradient(to right, #ffffff, #ffffff); /* Blue to light blue gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; /* Transparent fill to show the gradient */
     font-weight: bold;
@@ -177,12 +186,16 @@ nav ul li a {
     text-align: left;
     font-size: 2em;
     margin-bottom: 30px;
+    padding-left: 15%; /* Adjust percentage as needed */
+    padding-right: 15%; /* Adjust percentage as needed */
 }
 
 #about p {
     font-size: 1.1em;
     line-height: 1.8;
     padding: 0;
+    padding-left: 15%; /* Adjust percentage as needed */
+    padding-right: 15%; /* Adjust percentage as needed */
 }
 
 /* View Resume Button */
@@ -380,3 +393,7 @@ nav ul li a {
     max-width: 80px;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+  

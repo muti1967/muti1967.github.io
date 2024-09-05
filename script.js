@@ -1,75 +1,79 @@
-/*document.addEventListener('DOMContentLoaded', function() {
-    const sections = document.querySelectorAll('.slide-in-section');
-    const options = {
-        threshold: 0.1
-    };
 
-    const observer = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, options);
+var TxtType = function(el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+};
 
-    sections.forEach(section => {
-        observer.observe(section);
-    });
+TxtType.prototype.tick = function() {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
 
-    // Dropdown functionality
-    const dropdowns = document.querySelectorAll('.dropdown-btn');
-    dropdowns.forEach(button => {
-        button.addEventListener('click', function() {
-            this.classList.toggle('active');
-            const content = this.nextElementSibling;
-            if (content.style.display === 'block') {
-                content.style.display = 'none';
-            } else {
-                content.style.display = 'block';
-            }
-        });
-    });
-
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        alert('Thank you for your message, ' + document.getElementById('name').value + '! I will get back to you soon.');
-        // Clear the form
-        document.getElementById('contact-form').reset();
-    });
-});
-
-// Toggle dropdown form visibility
-// Toggle dropdown form visibility
-document.getElementById('contact-dropdown').addEventListener('click', function() {
-    var contactFormContainer = document.getElementById('contact-form-container');
-    if (contactFormContainer.style.display === 'none' || contactFormContainer.style.display === '') {
-        contactFormContainer.style.display = 'block';
+    if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
     } else {
-        contactFormContainer.style.display = 'none';
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
     }
-});
-document.getElementById('contact-dropdown').addEventListener('click', function(e) {
-    e.preventDefault();
+
+    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+    var that = this;
+    var delta = 200 - Math.random() * 100;
+
+    if (this.isDeleting) { delta /= 2; }
+
+    if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+    }
+
+    setTimeout(function() {
+        that.tick();
+    }, delta);
+};
+
+window.onload = function() {
+    var elements = document.getElementsByClassName('typewrite');
+    for (var i=0; i<elements.length; i++) {
+        var toRotate = elements[i].getAttribute('data-type');
+        var period = elements[i].getAttribute('data-period');
+        if (toRotate) {
+            new TxtType(elements[i], JSON.parse(toRotate), period);
+        }
+    }
+
+
+    var css = document.createElement("style");
+css.type = "text/css";
+css.innerHTML = `
+    @keyframes cursorColorChange {
+        0% { border-right-color: #fff; }   /* Start with white */
+        100% { border-right-color: #0000FF; } /* Full blue at the end */
+    }
+
+    @keyframes cursorBlink {
+        0% { border-right-color: transparent; }
+        50% { border-right-color: currentColor; }
+        100% { border-right-color: transparent; }
+    }
+
+    .typewrite > .wrap {
+        border-right: 0.08em solid;
+        animation: cursorBlink 1s steps(1) infinite, cursorColorChange 2s linear infinite;
+    }
+`;
+document.body.appendChild(css);
+
     
-    var contactFormContainer = document.getElementById('contact-form-container');
-
-    // Toggle visibility
-    if (contactFormContainer.style.display === 'none' || contactFormContainer.style.display === '') {
-        contactFormContainer.style.display = 'block';
-    } else {
-        contactFormContainer.style.display = 'none';
-    }
-
-    // Smoothly scroll to the form
-    contactFormContainer.scrollIntoView({
-        behavior: 'smooth'
-    });
-});
-
-*/
-// Toggle dropdown form visibility and scroll smoothly to the form
-
+};
 document.querySelector('.logo a').addEventListener('click', function(e) {
     e.preventDefault(); // Prevent the default anchor click behavior
     document.querySelector('#top').scrollIntoView({
@@ -150,3 +154,45 @@ document.getElementById("menu-icon").addEventListener("click", function() {
       }
     });
   });
+
+
+       
+            window.onload = function() {
+                var elements = document.getElementsByClassName('typewrite');
+                for (var i=0; i<elements.length; i++) {
+                    var toRotate = elements[i].getAttribute('data-type');
+                    var period = elements[i].getAttribute('data-period');
+                    if (toRotate) {
+                        new TxtType(elements[i], JSON.parse(toRotate), period);
+                    }
+                }
+    
+                // Inject CSS for the typing cursor
+                var css = document.createElement("style");
+                css.type = "text/css";
+                css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+                document.body.appendChild(css);
+            };
+
+
+            
+            document.addEventListener("DOMContentLoaded", function() {
+                const links = document.querySelectorAll('nav ul li a[href^="#"]'); // Select all anchor links starting with '#'
+              
+                for (const link of links) {
+                  link.addEventListener("click", function(e) {
+                    e.preventDefault(); // Prevent default behavior (jumping to section)
+              
+                    const targetId = this.getAttribute("href").substring(1); // Get the ID of the target section
+                    const targetElement = document.getElementById(targetId);
+              
+                    if (targetElement) {
+                      window.scrollTo({
+                        top: targetElement.offsetTop, // Scroll to the target section's top
+                        behavior: "smooth" // Enable smooth scroll behavior
+                      });
+                    }
+                  });
+                }
+              });
+              
