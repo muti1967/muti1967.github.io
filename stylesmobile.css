@@ -142,10 +142,10 @@ nav ul li a {
 }
 
 .emoji {
-    width: 1.5em; /* Adjust the width to make it smaller */
+    width: 2em; /* Adjust the width to make it smaller */
     height: auto; /* Maintain aspect ratio */
     vertical-align: middle; /* Aligns the emoji with the text */
-    padding-bottom: 0.2in;
+    padding-bottom: 0.4in;
 
 }
 
