@@ -106,7 +106,7 @@ nav ul li a {
     border-right: 0.08em solid #fff; /* Creates the typing cursor */
     font-weight: bold; /* Optional: Makes the text bold */
     font-size: 1.2em; /* Increase for emphasis on mobile */
-    background: linear-gradient(to right, #ffffff, #011df0); /* Blue to light blue gradient */
+    background: linear-gradient(to right, #238bed, #8480ff); /* Blue to light blue gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; /* Transparent fill to show the gradient */
 }
@@ -122,9 +122,7 @@ nav ul li a {
     background: linear-gradient(to right, #ffffff, #ffffff); /* Blue to light blue gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; /* Transparent fill to show the gradient */
-    font-family: 'Inter', sans-serif;
-    font-weight: 100; /* Use different weights for thin, regular, or bold */
-    
+    font-weight: bold;
 }
 
 #welcome .im-word {
@@ -137,7 +135,7 @@ nav ul li a {
 
 #welcome .gradient-text {
     font-size: 1.2em; /* Increase for emphasis on mobile */
-    background: linear-gradient(to right, #5e59f3, #b1c0ff); /* Blue to light blue gradient */
+    background: linear-gradient(to right,  #8480ff, #8480ff); /* Blue to light blue gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; /* Transparent fill to show the gradient */
     font-weight: bold;
