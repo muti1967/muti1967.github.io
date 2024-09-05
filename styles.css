@@ -95,11 +95,9 @@ nav ul li a:hover::before {
     background: linear-gradient(to right, #ffffff, #ffffff); /* Blue to light blue gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; /* Transparent fill to show the gradient */
-    font-family: 'Lato', sans-serif;
-    font-weight: bold; /* Thin weight */
-    font-size: 1.7em;
-    line-height: 1.5;
-   
+    font-family: 'Inter', sans-serif;
+    font-weight: thin; /* Use different weights for thin, regular, or bold */
+    
 }
 
 #welcome .im-word {
