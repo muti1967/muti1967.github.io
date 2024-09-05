@@ -123,7 +123,7 @@ nav ul li a {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; /* Transparent fill to show the gradient */
     font-weight: bold;
-    
+    font-family: 'Dancing Script', cursive; /* Apply Dancing Script font */
 
     
 }
