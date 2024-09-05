@@ -2,11 +2,12 @@
 body {
     background-color: #000000; /* Black background */
     color: #fff; /* White text */
-    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
     overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 /* Logo and Navigation Menu */
@@ -78,6 +79,25 @@ nav ul li a:hover::before {
 }
 
 /* Welcome Section */
+
+#welcome .Howdy {
+    font-size: 1.5em; /* Increase for emphasis on mobile */
+    background: linear-gradient(to right, #ffffff, #ffffff); /* Blue to light blue gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Transparent fill to show the gradient */
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive; /* Apply Dancing Script font */
+    
+}
+
+#welcome .im-word {
+    font-size: 1.2em; /* Increase for emphasis on mobile */
+    background: linear-gradient(to right, #ffffff, #b1c0ff); /* Blue to light blue gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Transparent fill to show the gradient */
+    font-weight: bold;
+}
+
 #welcome h1 {
     font-size: 3em; /* Adjust this value to make the text larger or smaller */
     font-weight: bold;

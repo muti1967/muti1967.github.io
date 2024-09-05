@@ -2,13 +2,13 @@
 body {
     background-color: #000000;
     color: #fff;
-    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
     overflow-x: hidden;
-}
+    font-family: 'Roboto', sans-serif; /* Apply Roboto font */
 
+}
 /* Logo */
 .logo {
     position: fixed;
@@ -107,8 +107,32 @@ nav ul li a {
     margin-bottom: 15px;
 }
 
+
+#welcome .Howdy {
+    font-size: 2em; /* Increase for emphasis on mobile */
+    background: linear-gradient(to right, #ffffff, #ffffff); /* Blue to light blue gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Transparent fill to show the gradient */
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive; /* Apply Dancing Script font */
+
+    
+}
+
+#welcome .im-word {
+    font-size: 1.2em; /* Increase for emphasis on mobile */
+    background: linear-gradient(to right, #ffffff, #b1c0ff); /* Blue to light blue gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Transparent fill to show the gradient */
+    font-weight: bold;
+}
+
 #welcome .gradient-text {
-    font-size: 1.5em; /* Increase for emphasis on mobile */
+    font-size: 1.2em; /* Increase for emphasis on mobile */
+    background: linear-gradient(to right, #5e59f3, #b1c0ff); /* Blue to light blue gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Transparent fill to show the gradient */
+    font-weight: bold;
 }
 
 .emoji {
@@ -147,6 +171,12 @@ nav ul li a {
     margin-top: 30px;
     padding: 0 20px;
     text-align: center;
+}
+
+#about h2 {
+    text-align: left;
+    font-size: 2em;
+    margin-bottom: 30px;
 }
 
 #about p {
