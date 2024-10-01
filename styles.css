@@ -618,6 +618,22 @@ html {
     height: 400px;
     border-radius: 1%;
 }
+/* Profile picture section */
+.profile-picture3 {
+    flex: 0 0 35%; /* Image takes up 35% of the width */
+    padding-top: 2%;   
+    padding-right: 10%;
+    margin-left: auto; /* Automatically push the section to the right */
+    margin-top: 10px; /* Align with the text */
+    display: flex;
+    justify-content: flex-end; /* Align image to the far right */
+}
+
+.profile-picture3 img {
+    width: 400px; /* Adjust image size as needed */
+    height: 400px;
+    border-radius: 1%;
+}
 
 
 .about-icons {
