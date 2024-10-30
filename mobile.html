@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Muti Shuman - My Personal Website</title>
-    <link rel="stylesheet" href="stylesmobile.css?v=1.26">
+    <link rel="stylesheet" href="stylesmobile.css?v=1.26" />
 
     <script>
       function toggleMenu() {
-        const navLinks = document.getElementById('nav-links');
-        navLinks.classList.toggle('show-menu');
+        const navLinks = document.getElementById("nav-links");
+        navLinks.classList.toggle("show-menu");
       }
-    </script> 
+    </script>
   </head>
   <body>
     <div id="top"></div>
@@ -26,7 +38,8 @@
     </div>
 
     <nav>
-      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger Icon -->
+      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+      <!-- Hamburger Icon -->
       <ul id="nav-links">
         <li><a href="">ABOUT ME</a></li>
         <li><a href="#portfolio">MY RESUME</a></li>
@@ -38,15 +51,23 @@
     <div class="content-container">
       <div class="text-content">
         <section id="welcome">
-            <h1>
-                <span class="Howdy"> Howdy</span> 
-                <img src="files/apple-wave.png" alt="Waving Hand" class="emoji" /><br />
-                <span class="im-word"> I am </span>
-                <a href="#" class="typewrite" data-period="2000" data-type='[ "Muti Shuman.", "a CS Student.", "Dedicated.",  "a Problem Solver." ]'>
-                    <span class="wrap"></span>
-                </a>
-            
-              </h1>
+          <h1>
+            <span class="Howdy"> Howdy</span>
+            <img
+              src="files/apple-wave.png"
+              alt="Waving Hand"
+              class="emoji"
+            /><br />
+            <span class="im-word"> I am </span>
+            <a
+              href="#"
+              class="typewrite"
+              data-period="2000"
+              data-type='[ "Muti Shuman.", "a CS Student.", "Dedicated.",  "a Problem Solver." ]'
+            >
+              <span class="wrap"></span>
+            </a>
+          </h1>
           <p class="intro-text">
             I am currently studying Computer Science at Santa Clara University
             and working at Apple as a Technician. Please feel free to check out
@@ -59,7 +80,7 @@
       </div>
     </div>
     <div class="about-content">
-        <h2>About</h2>
+      <h2>About</h2>
 
       <section id="about" class="half-section fade">
         <p>
@@ -99,9 +120,7 @@
         <div class="project-cards">
           <div class="project-card">
             <img src="files/emotionai.png" alt="AI Emotion Detector" />
-            <a href="ai_project.html" target="_blank"
-              >AI Emotion Detector</a
-            >
+            <a href="ai_project.html" target="_blank">AI Emotion Detector</a>
           </div>
           <div class="project-card">
             <img
@@ -190,5 +209,5 @@
     </section>
 
     <script src="script.js?v=1.2"></script>
-</body>
+  </body>
 </html>
