@@ -721,6 +721,8 @@ html {
 
 .profile-picture3 img {
     padding-top: 10%;
+    margin-top: 30%;
+
     padding-left: 10%;
     padding-right: 10%;
     width: 111; /* Adjust image size as needed */
@@ -729,10 +731,10 @@ html {
 
 }
 .profile-picture2 img {
-    padding-top: 10%;
+    padding-top: 0%;
     width: 110; /* Adjust image size as needed */
     height: auto;
-    border-radius: 45px;
+    border-radius: 5px;
 }
 
 footer {
