@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Muti Shuman - My Personal Website</title>
-    <link rel="stylesheet" href="/css/styles.css?v=1.26" />
+    <link rel="stylesheet" href="/css/stylesmobile.css?v=1.26" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <link
@@ -16,35 +16,6 @@
       rel="stylesheet"
     />
 
-    <script>
-      $(window).on("load", function () {
-        $(window)
-          .scroll(function () {
-            var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-            $(".fade").each(function () {
-              var objectBottom = $(this).offset().top + $(this).outerHeight();
-              if (objectBottom < windowBottom) {
-                if ($(this).css("opacity") == 0) {
-                  $(this).fadeTo(500, 1);
-                }
-              } else {
-                if ($(this).css("opacity") == 1) {
-                  $(this).fadeTo(500, 0);
-                }
-              }
-            });
-          })
-          .scroll(); // invoke  scroll-handler on page-loads
-      });
-    </script>
-    
-    <script>
-      if (window.innerWidth <= 768) {
-        window.location.href = "/pages/mobile.html"; // Redirects to mobile version
-      }
-    </script>
-
-
   </head>
   <body>
     <div id="top"></div>
@@ -54,14 +25,28 @@
       </a>
     </div>
 
+   
     <nav>
-      <ul>
-        <li><a href="/pages/aboutme.html">ABOUT ME</a></li>
-        <li><a href="#portfolio">MY RESUME</a></li>
-        <li><a href="/pages/projects.html">PROJECTS</a></li>
-        <li><a href="#contact">CONTACT ME</a></li>
-      </ul>
-    </nav>
+      <input type="checkbox" id="check" />
+      <label for="check" class="checkbtn">
+          ☰
+      </label>
+      <div class="nav-mobile">
+          <ul>
+              <li><a href="/pages/aboutme.html">ABOUT ME</a></li>
+              <li><a href="#portfolio">MY RESUME</a></li>
+              <li><a href="/pages/projects.html">PROJECTS</a></li>
+              <li><a href="#contact">CONTACT ME</a></li>
+          </ul>
+      </div>
+  </nav>
+  
+
+<script>
+    function toggleMenu() {
+        document.getElementById("nav-links").classList.toggle("show-menu");
+    }
+</script>
 
     <div class="content-container">
       <div class="text-content">
@@ -122,7 +107,7 @@
         <h2><b2> </b2> <b2> </b2><b2> </b2></h2>
         <div class="project-links">
           <a
-            href="files/Resume_Muti_Shuman_10_24.pdf"
+            href="/files/Resume_Muti_Shuman_10_24.pdf"
             target="_blank"
             class="view-resume-button"
             >View My Resume</a
@@ -135,14 +120,14 @@
         <h2>Featured Projects</h2>
         <div class="project-cards">
           <div class="project-card">
-            <img src="files/emotionai.png" alt="AI Emotion Detector" />
+            <img src="/files/emotionai.png" alt="AI Emotion Detector" />
             <a href="/pages/ai_project.html" 
               >AI Emotion Detector</a
             >
           </div>
           <div class="project-card">
             <img
-              src="files/projrpi.jpeg"
+              src="/files/projrpi.jpeg"
               alt="RPI project"
             />
             <a href="/pages/rpiserverproj.html" 
@@ -150,15 +135,15 @@
             >
           </div>
           <div class="project-card">
-            <img src="files/gesture_device.JPG" alt="AI Gesture Recognition Device ">
+            <img src="/files/gesture_device.JPG" alt="AI Gesture Recognition Device ">
             <a href="/pages/aigestureproj.html" >AI Gesture Recognition Device</a>
         </div>
           <div class="project-card">
             <img
-              src="files/autodeskdesign.png"
+              src="/files/autodeskdesign.png"
               alt="Auto Desk Design Challenge"
             />
-            <a href="files/audtodeskaward.pdf" target="_blank"
+            <a href="/files/audtodeskaward.pdf" target="_blank"
               >Auto Desk Design Challenge</a
             >
           </div>
@@ -184,16 +169,16 @@
               href="https://www.linkedin.com/in/muti-b574a9158/"
               target="_blank"
             >
-              <img src="files/linkedin.png" alt="LinkedIn" />
+              <img src="/files/linkedin.png" alt="LinkedIn" />
             </a>
             <a href="mailto:mutishuman@gmail.com" target="_blank">
-              <img src="files/email.png" alt="Email" />
+              <img src="/files/email.png" alt="Email" />
             </a>
             <a href="https://www.instagram.com/muti97/?hl=en" target="_blank">
-              <img src="files/instagram.png" alt="Instagram" />
+              <img src="/files/instagram.png" alt="Instagram" />
             </a>
             <a href="https://github.com/muti1967" target="_blank">
-              <img src="files/github.png" alt="GitHub" />
+              <img src="/files/github.png" alt="GitHub" />
             </a>
           </div>
         </div>
@@ -232,7 +217,7 @@
       <p>
         © 2024 Muti Shuman
         <img
-          src="files/apple-wave.png"
+          src="/files/apple-wave.png"
           alt="Waving Hand"
           class="emoji small-emoji"
         /><br />

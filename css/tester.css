@@ -1,0 +1,306 @@
+/* General Styles */
+body {
+    background-color: #000000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Logo and Navigation Menu */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.logo {
+    position: fixed;
+    top: 5px;
+    left: 15px;
+    z-index: 1001;
+}
+
+.logo img {
+    max-width: 90px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #ff5722;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff5722;
+    transform: translateY(-2px);
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+}
+
+/* Welcome Section */
+* { color:#fff; text-decoration: none; }
+.typewrite > .wrap {
+    border-right: 0.08em solid #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+    background: linear-gradient(to right, #238bed, #8480ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#welcome .Howdy, #welcome .im-word, #welcome h1, .gradient-text {
+    font-weight: bold;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#welcome .Howdy, #welcome .im-word {
+    font-size: 1.2em;
+    background: linear-gradient(to right, #ffffff, #ffffff);
+}
+
+#welcome h1 {
+    font-size: 2.5em;
+    color: #ffffff;
+}
+
+.gradient-text {
+    font-size: 1.2em;
+    background: linear-gradient(to right, #8480ff, #8480ff);
+}
+
+/* Contact Form */
+#contact-section {
+    text-align: center;
+}
+
+#contact-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+#contact-form input, #contact-form textarea {
+    padding: 15px;
+    font-size: 1em;
+    border: 2px solid #224eff;
+    background-color: #111;
+    color: #fff;
+    border-radius: 5px;
+}
+
+#contact-form button {
+    padding: 15px;
+    font-size: 1.2em;
+    border: none;
+    background-color: #224eff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: #ff5722;
+    transform: translateY(-3px);
+}
+
+/* Project Section */
+#projects h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: #ffffffed;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+}
+
+.project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: #000000;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    max-width: 310px;
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 15px #00000080;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card a {
+    padding: 20px;
+    color: #224eff;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #111;
+    transition: background-color 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.9);
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+
+/* Large Tablets and Small Desktops */
+@media (max-width: 1024px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 10px;
+    }
+
+    .profile-picture img {
+        width: 200px;
+    }
+
+    .project-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .view-resume-button, #contact-form button {
+        width: 100%;
+    }
+}
+
+/* Small Tablets and Large Phones */
+@media (max-width: 768px) {
+    .project-card {
+        width: calc(50% - 10px);
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .profile-picture img {
+        width: 180px;
+    }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+    .project-card {
+        width: 100%;
+    }
+
+    .profile-picture img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .view-resume-button, #contact-form button {
+        font-size: 1em;
+        padding: 10px;
+        width: 100%;
+    }
+
+    #welcome h1 {
+        font-size: 2em;
+    }
+
+    .gradient-text {
+        font-size: 1.2em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Footer */
+footer {
+    padding: 5px;
+    background-color: #060606;
+    text-align: center;
+    font-size: 0.9em;
+    color: #ffffff;
+}
+
+/* Social Media and Contact Section */
+.contact-social-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}

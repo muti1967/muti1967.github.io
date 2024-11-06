@@ -1,3 +1,5 @@
+my old projects css page only if i need to roll back
+
 body {
     background-color: #000;
     color: #fff;
@@ -182,3 +184,10 @@ footer {
         grid-template-columns: 1fr; /* One card per row on small screens */
     }
 }
+
+
+  <script>
+      if (window.innerWidth <= 768) {
+        window.location.href = "/pages/mobile.html"; // Redirects to mobile version
+      }
+    </script>

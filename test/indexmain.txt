@@ -1,31 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap"
-      rel="stylesheet"
-    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Muti Shuman - My Personal Website</title>
-    <link rel="stylesheet" href="stylesmobile.css?v=1.26" />
-
+    <link rel="stylesheet" href="styles.css" />
     <script>
-      function toggleMenu() {
-        const navLinks = document.getElementById("nav-links");
-        navLinks.classList.toggle("show-menu");
+      if (window.innerWidth <= 768) {
+        window.location.href = "mobile.html"; // Redirect to mobile version
       }
     </script>
   </head>
@@ -38,10 +20,8 @@
     </div>
 
     <nav>
-      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-      <!-- Hamburger Icon -->
-      <ul id="nav-links">
-        <li><a href="">ABOUT ME</a></li>
+      <ul>
+        <li><a href="#aboutme">ABOUT ME</a></li>
         <li><a href="#portfolio">MY RESUME</a></li>
         <li><a href="#projects">PROJECTS</a></li>
         <li><a href="#contact">CONTACT ME</a></li>
@@ -52,21 +32,14 @@
       <div class="text-content">
         <section id="welcome">
           <h1>
-            <span class="Howdy"> Howdy</span>
+            Howdy
             <img
               src="files/apple-wave.png"
               alt="Waving Hand"
               class="emoji"
             /><br />
-            <span class="im-word"> I am </span>
-            <a
-              href="#"
-              class="typewrite"
-              data-period="2000"
-              data-type='[ "Muti Shuman.", "a CS Student.", "Dedicated.",  "a Problem Solver." ]'
-            >
-              <span class="wrap"></span>
-            </a>
+            I'm
+            <span class="gradient-text">Muti Shuman</span>.
           </h1>
           <p class="intro-text">
             I am currently studying Computer Science at Santa Clara University
@@ -74,31 +47,50 @@
             some of my projects below on my personally coded website!
           </p>
         </section>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <script>
+          $(window).on("load", function() {
+            $(window).scroll(function() {
+              var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+              $(".fade").each(function() {
+                var objectBottom = $(this).offset().top + $(this).outerHeight();
+                if (objectBottom < windowBottom) {
+                  if ($(this).css("opacity") == 0) {
+                    $(this).fadeTo(500, 1);
+                  }
+                } else {
+                  if ($(this).css("opacity") == 1) {
+                    $(this).fadeTo(500, 0);
+                  }
+                }
+              });
+            }).scroll(); // invoke scroll-handler on page-load
+          });
+        </script>
+      <section id="about" class="half-section fade">
+  <h2>About Me</h2>
+  <p>
+            Hey! My Name is Muti Shuman and this is my personally coded
+            portfolio. Please feel free to browse my projects, resume, or the
+            contact me section to reach out! With over two years of work
+            experience in the technology industry, I am a passionate and skilled
+            Genius at Apple, where I repair devices and relationships with
+            customers and consumers. In addition to my work experience, I have a
+            strong interest and background in computer science and engineering.
+            I am currently pursuing a bachelor's degree at Santa Clara
+            University, where I am expanding my knowledge and skills in this
+            field. I am motivated by Apple's mission to create products that
+            empower people and enrich their lives, and I strive to deliver
+            exceptional service and support to every customer. I value teamwork,
+            diversity, and innovation, and I bring a positive and collaborative
+            attitude to my role.
+          </p>
+        </section>
       </div>
       <div class="profile-picture">
-        <img src="files/mypic3.jpeg" alt="Muti Shuman" />
+        <img src="files/picofme1.png" alt="Muti Shuman" />
       </div>
-    </div>
-    <div class="about-content">
-      <h2>About</h2>
-
-      <section id="about" class="half-section fade">
-        <p>
-          Hey! My Name is Muti Shuman and this is my personally coded portfolio.
-          Please feel free to browse my projects, resume, or the contact me
-          section to reach out! With over two years of work experience in the
-          technology industry, I am a passionate and skilled Genius at Apple,
-          where I repair devices and relationships with customers and consumers.
-          In addition to my work experience, I have a strong interest and
-          background in computer science and engineering. I am currently
-          pursuing a bachelor's degree at Santa Clara University, where I am
-          expanding my knowledge and skills in this field. I am motivated by
-          Apple's mission to create products that empower people and enrich
-          their lives, and I strive to deliver exceptional service and support
-          to every customer. I value teamwork, diversity, and innovation, and I
-          bring a positive and collaborative attitude to my role.
-        </p>
-      </section>
     </div>
     <div class="container">
       <!-- Portfolio Section -->
@@ -106,7 +98,7 @@
         <h2><b2> </b2> <b2> </b2><b2> </b2></h2>
         <div class="project-links">
           <a
-            href="files/Resume_Muti_Shuman_10_24.pdf"
+            href="files/Public Resume Muti Shuman (1).pdf"
             target="_blank"
             class="view-resume-button"
             >View My Resume</a
@@ -120,7 +112,9 @@
         <div class="project-cards">
           <div class="project-card">
             <img src="files/emotionai.png" alt="AI Emotion Detector" />
-            <a href="ai_project.html" target="_blank">AI Emotion Detector</a>
+            <a href="https://emotion.ai-camp.org/" target="_blank"
+              >AI Emotion Detector</a
+            >
           </div>
           <div class="project-card">
             <img
@@ -208,6 +202,6 @@
       </div>
     </section>
 
-    <script src="script.js?v=1.2"></script>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -196,3 +196,7 @@ document.getElementById("menu-icon").addEventListener("click", function() {
                 }
               });
               
+              function toggleMenu() {
+                document.getElementById("nav-links").classList.toggle("show-menu");
+            }
+            
